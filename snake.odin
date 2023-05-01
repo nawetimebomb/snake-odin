@@ -53,20 +53,11 @@ apple := v2{ 0, 0 }
 apple_counter := 0
 apple_on_screen := false
 
-w_texture: rl.Texture
-a_texture: rl.Texture
-s_texture: rl.Texture
-d_texture: rl.Texture
 fading_alpha: f32 = 1.0
 
 main :: proc() {
 	rl.InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "My Snake")
 	defer rl.CloseWindow()
-
-	w_texture = rl.LoadTexture("res/w.png")
-	a_texture = rl.LoadTexture("res/a.png")
-	s_texture = rl.LoadTexture("res/s.png")
-	d_texture = rl.LoadTexture("res/d.png")
 
 	init_game()
 
